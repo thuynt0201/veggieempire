@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover">
+    <title>Đồ án - Veggie Empire</title>
+ 
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+ 
+   
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+     <!--custom css file link-->
+     <link rel="stylesheet" href="../CSS/cart.css">
+ 
+</head>
+<body>
+   <!--Thanh tiêu đề-->
+        <!--Thanh tiêu đề-->
+        <header>
+            <a href="#" class="logo"><img src="../Image/logo (1).svg"></a>
+       
+            <nav class="navbar">
+                <a  href="../HTML/homepage.html">Trang chủ</a>
+                <a   href="../HTML/aboutus.html">Về chúng tôi</a>
+                <a   href="../HTML/menu.html">Thực đơn</a>
+                <a   href="../HTML/policy.html">Chính sách</a>
+                <a href="../HTML/contact.html">Liên hệ</a>            
+            </nav>
+       
+            <div class="icons">
+                <i class="fas fa-bars" id="menu-bars"></i>
+                <i class="fas fa-search" id="search-icon"></i>
+                <a href="../HTML/menu.html" class="fa fa-cart-plus"></a>            
+                <a href="../HTML/login.html" class="fas fa-user"></a>            
+            </div>    
+        </header>
+       <!--Thanh tiêu đề END-->
+      <!-- search form  -->
+ 
+      <form action="" id="search-form">
+        <input type="search" placeholder="Tìm món ăn" name="" id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+        <i class="fas fa-times" id="close"></i>
+    </form>
+ 
+<!-- MENU -->
+<!-- desktop view -->
+ 
+<section id="cart">
+    <div class="containe" id="containe">
+        <div id="food-containe">
+            <div class="cart-page">
+                <div class="cart-title">
+                    <p>Giỏ hàng</p>
+                </div>
+                <table>
+                    <thead>
+                        <td>Món ăn</td>
+                        <td>Tên món ăn</td>
+                        <td>Số lượng</td>
+                        <td>Giá</td>
+                    </thead>
+                </table>
+                <div class="border"> </div>
+                <div class="checkout">
+                    <div>
+                        <p class="total-item">Tổng số lượng : 0</p>
+                    </div>
+                    <div>
+                        <p class="total-price"> Tổng đơn hàng : 0 </p>
+                    </div>
+                    <div>
+                        <p class="delievery">Phí vận chuyển 22000 ₫</p>
+                    </div>
+                </div>
+                <div class="btn-box">
+                    <button class="cart-btn">Đặt hàng</button>
+                </div>
+            </div>
+        </div>
+   
+    </div>
+</section>
+ 
+ 
+ 
+   <!--FOOTER-->
+   <p class="" w3-include-html="footer.html"></p>
+   
+   <script>
+       w3.includeHTML();        
+   </script>
+   
+ 
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+ 
+<!-- custom js file link  -->
+ 
+</body>
+</html>

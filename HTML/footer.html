@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <style>
+        /* Footer Styles */
+
+
+.footer
+{
+    background: #FFD705;
+    padding:2rem 9%;
+    margin-top: 5rem;
+}
+.footer__wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+}
+.footer__logo {
+    background-image:url(/Image/Google-Map-US_10.webp);
+    background-size: cover;
+	width: 200px;
+    height: 80px;
+	margin-bottom: 2rem;
+}
+.footer__logo1 {
+    background-image:url(/Image/dathongbao.png);
+    background-size: cover;
+	width: 260px;
+    height:100px;
+	margin-top: 1.5rem;
+}
+.footer__desc {
+	font-size: 1.4rem;
+	color: var(--black-2);
+	margin-bottom: 2rem;
+}
+.footer__socials__title {
+	font-size: 1.8rem;
+	color: var(--black-1);
+	margin-bottom: 1rem;
+}
+.footer__socials li {
+	display: inline-block;
+	margin-right: 0.5rem;
+}
+.footer__socials a {
+	padding: 0.5rem 0.8rem;
+	background-color: var(--white-1);
+	border: 1px solid var(--green-2);
+	border-radius: 8px;
+}
+.footer__socials svg {
+	width: 20px;
+	color: var(--black-2);
+}
+.footer__text__title {
+	font-size: 1.8rem;
+	margin-bottom: 1rem;
+	color: var(--black-1);
+	font-weight: 600;
+}
+.footer__text a {
+	font-size: 1.4rem;
+	margin-bottom: 0.5rem;
+	color: var(--black-2);
+	font-family: Raleway;
+	font-weight: 500;
+	line-height: 1.4em;
+}
+@media only screen and (min-width: 768px) {
+	footer {
+		padding-top: 8rem;
+		padding-bottom: 4rem;
+	}
+	.footer__wrapper {
+		flex-direction: row;
+	}
+	.footer__col1 {
+		flex: 3;
+	}
+	.footer__col2,
+	.footer__col3 {
+		flex: 2;
+	}
+	.footer__desc {
+		max-width: 300px;
+		font-size: 1.8rem;
+		margin-bottom: 2.5rem;
+	}
+	.footer__socials__title {
+		font-size: 2rem;
+		margin-bottom: 1.5rem;
+	}
+	.footer__text__title {
+		font-size: 2rem;
+		margin-bottom: 2rem;
+	}
+	.footer__text a {
+		font-size: 1.8rem;
+		margin-bottom: 1rem;
+	}
+}
+#copyright {
+	padding: 1rem 0;
+    
+}
+.copyright__text {
+	font-size: 1.4rem;
+	text-align: center;
+}
+@media only screen and (min-width: 768px) {
+	.copyright__text {
+		font-size: 1.6rem;
+		text-align: center;
+	}
+}
+.footer .icons i,
+.footer .icons a{
+    cursor: pointer;
+    margin-left: .5rem;
+    height:4.5rem;
+    line-height: 4.5rem;
+    width:4.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color:var(--black);
+    border-radius: 50%;
+    background: #eee;
+}
+
+.footer .icons i:hover,
+.footer .icons a:hover{
+    color:#fff;
+    background: var(--green);
+    transform: rotate(360deg);
+}
+
+
+
+.footer .box h3{
+    padding:.5rem 0;
+    font-size: 2.5rem;
+    color:var(--black);
+}
+
+.footer .box a{   
+    padding:.5rem 0;
+    font-size: 1.8rem;
+    color:black;
+}
+
+.box ul li
+{
+    list-style-type: none;
+    display: inline;
+    margin-left: 10px;
+    font-size: 2.5rem;
+}
+
+ .inputBox1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.inputBox1 .input{
+    width:100%;
+}
+.inputBox1 .input span{
+    display:block;
+    padding:.5rem 0;
+    font-size: 1.5rem;
+    color:var(--light-color);
+}
+
+.inputBox1 .input input,
+.inputBox1 .input textarea{
+    background:#eee;
+    border-radius: .5rem;
+    padding:1rem;
+    font-size: 1.6rem;
+    color:var(--black);
+    text-transform: none;
+    margin-bottom: 1rem;
+    width:100%;
+}
+
+.inputBox1 .input input:focus,
+ .inputBox1 .input textarea:focus{
+    border:.1rem solid var(--green);
+}
+
+ .inputBox1 .input textarea{
+    height:20rem;
+    resize: none;
+}
+
+
+/* End Footer Styles */
+    </style>
+</head>
+<body>
+    
+    
+  <!-- Footer -->
+  <div class="footer" id="footer">
+    <div class="containerfooter">
+      <div class="footer__wrapper">
+        <div class="footer__col1">
+          <div class="footer__logo">            
+          </div>
+          <p class="footer__desc">
+            VEGGIE EMPIRE - nhà hàng chay được thiết kế với không gian thiền, những món ăn sạch giàu dinh dưỡng. Là nơi chúng ta trở về với...          </p>
+          <div class="footer__socials">
+            <h4 class="footer__socials__title">Follow us</h4>
+            <ol class="footer__socials__list">
+                <div class="icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i> 
+                    <i class="fab fa-tiktok"></i>
+                    <i class="fab fa-youtube"></i>          
+                    <i class="fab fa-google"></i>                
+            </ol>
+          </div>
+        </div>      
+    
+            <div class="footer__col2">
+           
+                <div class="box">
+                    <h3>Thông Tin Liên Hệ</h3>                     
+                    <ul>                 
+                    <li> <i class="fas fa-phone"></i></li>
+                    <li><a href="">0999 555 7777</a></li>
+                    </ul> 
+                    <ul>                 
+                        <li> <i class="fab fa-chrome"></i></li>
+                        <li><a href="">veggieempire.com</a></li>
+                    </ul>
+                    <ul>                 
+                        <li><i class="fas fa-location-pin"></i></li>
+                        <li><a href="">Số 669 Đường Quốc lộ 1, F Linh Xuân, TP Thủ Đức</a></li>
+                    </ul>
+                    
+                    <ul>                 
+                        <li><i class="fas fa-clock"></i></li>
+                        <li><a href="">09:00-22:00</a></li>
+                    </ul>
+                                     
+                </div>
+            </div>
+
+                
+        <div class="footer__col3">
+           
+            <div class="box">
+                <h3>Đăng kí nhận ưu đãi</h3>
+                <div class="inputBox1">
+                    <div class="input">
+                        <span>Email của bạn</span>
+                        <input type="text" placeholder="Nhập email">
+                    </div>                   
+                </div>
+                <input type="submit" value="Đăng kí" class="btn">
+                <div class="footer__logo1">            
+                </div>
+            </div>
+        </div>
+
+
+      </div>
+    </div>
+</div>
+  
+  <div id="copyright">
+    <div class="containerfooter">
+      <p class="copyright__text">
+        © copyright 2022 Veggie Empire | All rights reserved
+      </p>
+    </div>
+  </div>
+  <!-- End Footer -->
+
+    
+</body>
+</html>

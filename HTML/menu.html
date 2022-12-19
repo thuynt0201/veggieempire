@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover">
+    <title>Đồ án - Veggie Empire</title>
+ 
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+ 
+   
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+     <!--custom css file link-->
+     <link rel="stylesheet" href="../CSS/menu.css">
+ 
+</head>
+<body>
+   <!--Thanh tiêu đề-->
+        <!--Thanh tiêu đề-->
+        <header>
+            <a href="#" class="logo"><img src="../Image/logo (1).svg"></a>
+       
+            <nav class="navbar">
+                <a  href="../HTML/homepage.html">Trang chủ</a>
+                <a   href="../HTML/aboutus.html">Về chúng tôi</a>
+                <a class="active"  href="../HTML/menu.html">Thực đơn</a>
+                <a   href="../HTML/policy.html">Chính sách</a>
+                <a href="../HTML/contact.html">Liên hệ</a>            
+            </nav>
+       
+            <div class="icons">
+                <i class="fas fa-bars" id="menu-bars"></i>
+                <i class="fas fa-search" id="search-icon"></i>
+                <i class="fa fa-cart-plus" id="cart-plus"> 0 </i>
+                <i class="fas fa-user" id="search-user"></i>          
+            </div>    
+        </header>
+       <!--Thanh tiêu đề END-->
+      <!-- search form  -->
+ 
+      <form action="" id="search-form">
+        <input type="search" placeholder="Tìm món ăn" name="" id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+        <i class="fas fa-times" id="close"></i>
+    </form>
+ 
+    <form action="" id="login-form">
+        <div class="dropdown-menu  dropdown-menu-right ">
+           
+            <a href="#!" class="dropdown-item">
+                <i class="fas fa-circle-info"></i>
+              <span>Thông tin tài khoản</span>
+            </a>
+            <a href="#!" class="dropdown-item">
+                <i class="fas fa-check-to-slot"></i>
+              <span>Kiểm tra đơn hàng</span>
+            </a>
+            <a href="#!" class="dropdown-item">
+                <i class="fas fa-phone"></i>
+              <span>Đăng ký</span>
+            </a>
+            <a href="#!" class="dropdown-item">
+                <i class="fas fa-right-to-bracket"></i>
+              <span>Đăng nhập</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#!" class="dropdown-item">
+                <i class="fas fa-right-from-bracket"></i>
+              <span>Đăng xuất</span>
+            </a>
+          </div>
+    </form>
+ 
+<!-- MENU -->
+<!-- desktop view -->
+ 
+ 
+<div class="containe" id="containe">
+    <div id="food-containe">
+        <div id="header">
+        </div>
+        <div id="food-items" class="d-food-items">
+                <div id="High-Protein" class="d-High-Protein">
+                    <p id="category-name">High-Protein Vegetarian Meals</p>  
+                    <h2>Trọn vị đậm đà, tà tà ăn ngon...</h2>  
+                </div>
+ 
+               
+                <div id="healthy" class="d-healthy">
+                    <p id="category-name">Healthy Vegetarian Meals</p>    
+                    <h2>Món ăn thanh, gắp đũa nhanh</h2>
+                </div>
+ 
+               
+                <div id="Super-Quick" class="d-Super-Quick">
+                    <p id="category-name">Super Quick Vegetarian Meals</p>
+                    <h2>Không phải chờ, vậy gọi cái này đi</h2>
+                </div>
+ 
+                <div id="hotpot" class="d-hotpot">
+                    <p id="category-name">Vegetarian Hot Pot</p>
+                    <h2>Canh thanh, lẩu nóng, bụng vui, ấm lòng</h2>
+                </div>
+ 
+ 
+                <div id="drinks" class="d-drinks">
+                    <p id="category-name">Drinks</p>
+                </div>
+        </div>
+ 
+        <div id="cart-page" class="cart-toggle">
+            <p id="cart-title">Giỏ hàng của bạn</p>
+            <p id="m-total-amount">Tổng giỏ hàng: 100</p>
+            <table>
+                <thead>
+                    <td>Món ăn</td>
+                    <td>Tên Món ăn</td>
+                    <td>Số lượng</td>
+                    <td>Giá</td>
+                </thead>
+                <tbody id="table-body"></tbody>
+            </table>
+            <div class="border"> </div>
+            <div id="checkout" class="cart-toggle">
+                <div>
+                    <p id="total-item">Tổng số lượng: 0</p>
+                </div>
+                <div>
+                    <p id="total-price"> Tổng giỏ hàng : 0 </p>
+                </div>
+                <div>
+                    <p id="delievery">Phí vận chuyển 22000 ₫</p>
+                </div>
+            </div>
+      
+ 
+            <div class="contact">
+                <div class="row">
+                    <form action="">
+                        <p class="title">THÊM THÔNG TIN CHI TIẾT</p>
+                        <div class="inputBox">
+                            <input type="text" placeholder="Tên của bạn" class="box">
+                            <input type="email" placeholder="Email" class="box">
+                        </div>
+                        <div class="inputBox">
+                            <input type="number" placeholder="Số điện thoại" class="box">
+                            <input type="date" placeholder="Ngày sinh" class="box">
+                        </div>
+                        <textarea placeholder="Lời nhắn" cols="30" rows="10"></textarea>
+
+                        <div class="phuongthuc-2">
+
+                        <div> 
+                            <p class="phuongthuc">PHƯƠNG THỨC NHẬN HÀNG</p>
+                            <div class="method">                          
+                                <div class="radio-section">
+                                    <div class="radio-list">
+                                        <div class="radio-item" id="chooseaddress">
+                                            <input type="radio" name="radio" id="radio1">
+                                            <label for="radio1">Giao hàng tận nơi</label>
+                                        </div>
+                                        <div class="radio-item" >
+                                            <input type="radio" name="radio" id="radio2">
+                                            <label for="radio2">Mua mang về</label>
+                                        </div>
+                                    </div>                               
+                                </div>
+                            </div>
+                        </div>
+
+                      <div>
+                        <p class="phuongthuc">PHƯƠNG THỨC THANH TOÁN</p>
+                        <div class="method">                          
+                            <div class="radio-section">
+                                <div class="radio-list">
+                                    <div class="radio-item">
+                                        <input type="radio" name="radio1" id="radio3">
+                                        <label for="radio3">Thanh toán bằng tiền mặt</label>
+                                    </div>
+                                    <div class="radio-item" id="paymentmomo">
+                                        <input type="radio" name="radio1" id="radio4">
+                                        <label for="radio4">Thanh toán bằng Momo</label>
+                                    </div>
+                                </div>                               
+                            </div>
+                        </div>
+                      </div>  
+                    </div>
+                    
+                       
+
+                    </form>
+                </div>
+            </div>
+ 
+            <div class="modaladdress">
+                <div class="modal-box">    
+                    <form action="">
+                        <p class="title">GIAO HÀNG TẬN NƠI</p>
+                        <p class="titlesub">Nếu bạn mua mang về thì chọn Mua mang về để tiếp tục đặt hàng</p>
+                        <textarea placeholder="Nhập địa chỉ của bạn" cols="30" rows="5"></textarea>                   
+                    </form>
+                    <div class="buttons">
+                    <button class="close-address">Hủy</button>
+                    <button class="close-address-popup">Xác nhận</button>   
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modalpayment">
+                <div class="modal-box">
+                    <img src="../Image/QRCODEMOMO.jfif">
+                    <h2>Quét mã QR</h2>
+                    <h3>Bạn hãy quét mã QR Code trên ứng dụng Mono để thực hiện thanh toán</h3>
+                    <div class="buttons">
+                    <button class="close-popup">Hủy</button>
+                    <button class="close" onclick="myFunction()">Xác nhận</button>   
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal">  
+                <button class="show-modal">ĐẶT HÀNG NGAY</button>        
+                <div class="modal-box">
+                  <i class="fa-regular fa-circle-check"></i>
+                  <h2>Hoàn thành</h2>
+                  <h3>Bạn đã đặt hàng thành công. Món ăn sẽ đến với bạn ngay.</h3>
+                  <div class="buttons">
+                    <a href="../HTML/homepage.html"> <button class="close-btn">Về trang chủ</button></a>
+                    <a href="../HTML/ordered.html" ><button class="open-order">Đơn hàng</button></a>    
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <div id="cart">
+    <center>
+        <div id="category-list">
+            <p class="item-menu">Go For Hunt</p>              
+        </div>
+    </center>
+    </div>
+</div>
+ 
+ 
+<!-- mobile view -->
+<div id="mobile-view" class="mobile-view">
+    <div class="mobile-top">
+        <div class="top-menu">
+       
+            <i class="fa fa-cart-plus" id="m-cart-plus"> 0</i>
+        </div>
+    </div>
+   
+    <div class="item-container">
+        <div class="category-header" id="category-header">   </div>
+ 
+        <div id="food-items" class="food-items">
+            <div id="High-Protein" class="m-High-Protein">
+                <p id="category-name">High-Protein Vegetarian Meals</p>    
+            </div>
+            <div id="healthy" class="m-healthy">
+                <p id="category-name">Healthy Vegetarian Meals</p>    
+            </div>
+            <div id="Super-Quick" class="m-Super-Quick">
+                <p id="category-name">Super Quick Vegetarian Meals</p>
+            </div>
+            <div id="hotpot" class="m-hotpot">
+                <p id="category-name">Vegetarian Hot Pot</p>
+            </div>
+            <div id="drinks" class="m-drinks">
+                <p id="category-name">Drinks</p>
+            </div>
+ 
+        </div>            
+    </div>
+ 
+ 
+</div>
+   <!--FOOTER-->
+   <p class="" w3-include-html="footer.html"></p>
+   
+   <script>
+       w3.includeHTML();        
+   </script>
+
+   <script>
+    //Mở hợp thoại khi bấm vào đặt hàng ngay
+    const section = document.querySelector(".modal"),       
+            showBtn = document.querySelector(".show-modal"),
+            closeBtn = document.querySelector(".close-btn");
+            openBtn = document.querySelector(".open-order");
+          showBtn.addEventListener("click", () => section.classList.add("active"));     
+          
+    
+      //Mở hợp thoại khi bấm vào thanh toán bằng momo
+          
+          const sectionmomo = document.querySelector(".modalpayment"), 
+            showBtnmomo = document.querySelector("#paymentmomo"),
+            closeBtnmomo = document.querySelector(".close-popup"); 
+            closemomo = document.querySelector(".close");          
+            showBtnmomo.addEventListener("click", () => sectionmomo.classList.add("active")); 
+            closeBtnmomo.addEventListener("click", () => sectionmomo.classList.remove("active"));   
+            closemomo.addEventListener("click", () => sectionmomo.classList.remove("active"));  
+            
+            //Mở hộp thoại khi chọn địa chỉ giao hàng
+            const sectionaddress = document.querySelector(".modaladdress"), 
+            showBtnAddress = document.querySelector("#chooseaddress"),
+            closeBtnAddresss = document.querySelector(".close-address"); 
+            closeAddress = document.querySelector(".close-address-popup");          
+            showBtnAddress.addEventListener("click", () => sectionaddress.classList.add("active")); 
+            closeBtnAddresss.addEventListener("click", () => sectionaddress.classList.remove("active"));   
+            closeAddress.addEventListener("click", () => sectionaddress.classList.remove("active"));  
+       
+         function myFunction() {
+            alert("Bạn đã thanh toán thành công. Hãy nhấn Đặt hàng ngay để tiếp tục đơn hàng");
+}
+   </script>
+   
+ 
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+ 
+<!-- custom js file link  -->
+<script src="../JavaScript/menu.js" type="module"></script>
+ 
+</body>
+</html>
+ 

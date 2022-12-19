@@ -1,0 +1,295 @@
+/* ========== THANH TIÊU ĐỀ ==========  */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+:root{
+    --green:#27ae60;
+    --black:#192a56;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+ 
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border:none;    
+    transition: all .2s linear;
+}
+ 
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 15rem;
+    scroll-behavior:smooth;
+}
+ 
+section{
+    padding:2rem 9%;
+    margin-top: 5rem;
+   
+}
+ 
+section:nth-child(even){
+    background:#eee;
+}
+.heading{
+    text-align: center;
+    color:var(--black);
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+}
+ 
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color:#fff;
+    background: var(--black);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding:.8rem 3rem;
+    margin-left: 30px;
+}
+ 
+.btn:hover{
+    background: var(--green);
+    letter-spacing: .1rem;
+    margin-left: 30px;
+}
+ 
+ 
+/* ========== THANH TIÊU ĐỀ ==========  */
+header{
+    position: fixed;
+    top:0; left: 0; right:0;
+    background: #FFD705;
+    padding:1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+}
+ 
+header .navbar a{
+    font-size: 24px;
+    border-radius: .5rem;
+    padding:.2rem 1.5rem;
+    color:var(--light-color);
+}
+ 
+header .navbar a.active,
+header .navbar a:hover{
+    color:#fff;
+    background: var(--green);
+    font-weight: bold;
+}
+ 
+header .icons i,
+header .icons a{
+    cursor: pointer;
+    margin-left: .5rem;
+    height:4.5rem;
+    line-height: 4.5rem;
+    width:4.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color:var(--black);
+    border-radius: 50%;
+    background:#FFD705 ;
+}
+ 
+header .icons i:hover,
+header .icons a:hover{
+    color:#fff;
+    background: var(--green);
+    transform: rotate(360deg);
+}
+ 
+header .icons #menu-bars{
+    display: none ;
+}
+ 
+ 
+ 
+#search-form{
+    position: fixed;
+    margin-top: 9rem;
+    top:110%; right: 0;    
+    z-index: 1004;
+    background:rgba(88, 87, 74, 0.766);  
+    padding:0 1rem;    
+  width: 50rem;
+  border-radius: .5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5.5rem;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+ 
+}
+ 
+#search-form.active{
+    top:0;
+}
+ 
+#search-form #search-box{
+    width:50rem;
+    border-bottom: .1rem solid #fff;
+    padding:1rem 0;
+    color:#fff;
+    font-size: 3rem;
+    text-transform: none;
+    background:none;
+}
+ 
+#search-form #search-box::placeholder{
+    color:#eee;
+}
+ 
+#search-form #search-box::-webkit-search-cancel-button{
+    -webkit-appearance: none;
+}
+ 
+#search-form label{
+    color:#fff;
+    cursor:pointer;
+    font-size: 3rem;
+}
+ 
+#search-form label:hover{
+    color:var(--green);
+}
+ 
+/* media queries  */
+ 
+@media (max-width:991px){
+ 
+    html{
+        font-size: 55%;
+    }
+   
+    header{
+        padding:1rem 2rem;
+    }
+ 
+    section{
+        padding:2rem;      
+       
+    }
+ 
+ 
+}
+ 
+@media (max-width:768px){
+ 
+    header .icons #menu-bars{
+        display: inline-block;
+    }
+ 
+    header .navbar{
+        position: absolute;
+        top:100%; left:0; right:0;
+        background:#fff;
+        border-top: .1rem solid rgba(0,0,0,.2);
+        border-bottom: .1rem solid rgba(0,0,0,.2);
+        padding:1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+ 
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+ 
+    header .navbar a{
+        display: block;
+        padding:1.5rem;
+        margin:1rem;
+        font-size: 2rem;
+        background:#eee;
+    }
+ 
+   
+ 
+    #search-form #search-box{
+        width:90%;
+        margin:0 1rem;
+    }  
+ 
+}
+ 
+ 
+/* ========== HEADER END====  */
+.cart-title{
+    font-size: 35px;
+    margin: 5%;
+    color: #18B515;
+    font-weight: bolder;
+    text-align: center;
+}
+ 
+.cart-page table{
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+.cart-page table thead td{
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+ 
+.checkout{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    text-align: center;
+    margin: 40px auto;
+    border-radius: 5px;
+    background: white;
+    padding: 10px 20px;
+}
+.checkout p{
+    margin: 15px 0;
+    float: left;
+}
+.total-price, .total-item{
+    font-size: 25px;
+    color: black;
+    font-weight: bolder;
+}
+.delievery{
+    font-size: 20px;
+    color: limegreen;
+    font-weight: bolder;
+ 
+}
+ 
+.cart-btn{
+    outline: none;
+    border: none;
+    background: #18B515;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    bottom: 30px;
+    margin: 15px 0;
+    cursor: pointer;
+ 
+}
+ 
+     
+ 
+   
+ 
+ 
+                       
+ 
+ 
+ 
+ 
